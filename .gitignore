@@ -36,3 +36,6 @@ out/
 
 # Visual Studio cache/options directory
 .vs/
+
+build/
+.cache/

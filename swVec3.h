@@ -53,12 +53,14 @@ class Vec3 {
     }
 
     Vec3 &normalize() {
-        float l = 1.0f / std::sqrt(m[0] * m[0] + m[1] * m[1] + m[2] * m[2]);
+        float l = 1.0f / magnitude();
         m[0] *= l;
         m[1] *= l;
         m[2] *= l;
         return *this;
     }
+
+    float magnitude() const { return std::sqrt(m[0] * m[0] + m[1] * m[1] + m[2] * m[2]); }
 
   public:
     float m[3]{0.0f, 0.0f, 0.0f};
